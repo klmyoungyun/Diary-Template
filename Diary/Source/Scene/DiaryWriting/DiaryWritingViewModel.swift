@@ -8,9 +8,13 @@
 import Foundation
 
 final class DiaryWritingViewModel: ObservableObject {
-  
+  @Published var title: String = ""
+  @Published var content: String = ""
 }
 
 extension DiaryWritingViewModel {
-  
+  @MainActor
+  func saveDiary() async {
+    await Diary.saveDiary(title: title, content: content)
+  }
 }
