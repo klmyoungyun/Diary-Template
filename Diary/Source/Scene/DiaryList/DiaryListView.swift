@@ -53,7 +53,7 @@ private struct DiariesView: View {
         ZStack {
           // 일기 내용 뷰 이동 링크
           NavigationLink {
-            DiaryDetailView()
+            DiaryDetailView(diaryDetailVM: .init(diary: diary))
           } label: {
             EmptyView()
           }

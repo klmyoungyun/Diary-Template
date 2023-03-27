@@ -8,5 +8,9 @@
 import Foundation
 
 final class DiaryDetailViewModel: ObservableObject {
-
+  @Published var diary: DiaryItem
+  
+  init(diary: DiaryItem) {
+    self.diary = diary
+  }
 }
